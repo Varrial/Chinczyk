@@ -1,0 +1,16 @@
+Postarałem się aby boty poruszały się z strategią, więc tutaj przedstawiam w jakiej kolejności wybierają który ruch wykonać (wykona się ruch z najwyższą pozycją):
+	1. Jeśli inny kolor stoi na następnym polu.
+	2. Jeśli może wejść na pola zwycięzkie.
+	3. Wychodzenie ze staru.
+	4. Jeśli na następnym polu nic nie stoi.
+	5. Jeśli ten sam kolor stoi na następnym polu.
+	6. Jeśli może poruszyć się po zwycięzkim polu.
+
+Jeżeli gracz nie ma możliwości ruchu, należy wcisnąć przycisk, na którym wyświetla się wartość kostki (działa on tylko wtedy).
+
+Jesli czas upłynie ruch wykona się automatycznie. Jeżeli jednak stanie się tak dwa razy, wtedy gracz automatycznie zamieni się w bota.
+
+Usunąłem także wszelkie błedy, które znalazłem, tak więc gra powinna być czystą przyjemnością.
+Cały kod został w 100% napisany przeze mnie.
+
+Gracjan Ulianowski
