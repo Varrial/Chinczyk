@@ -208,7 +208,7 @@ function rzut(profil, rzut) {             //rzut kostką
                 waga = 4;
             }
             else if(miejsce != 0 && miejsce < 90){          //są na plaszy
-                if (miejsce < miejsceStartowe && miejsceNowe >= miejsceStartowe){ //jeśli może wejść na pole zwycięzkie     waga 5
+                if (miejsce < miejsceStartowe && miejsceNowe >= miejsceStartowe){ //jeśli może wejść na pole zwycięskie     waga 5
                     if(miejsceNowe - miejsceStartowe <= 3 && document.getElementById("win"+profil+(miejsceNowe - miejsceStartowe)).innerHTML == "" && waga < 5){
                         doPoruszenia = kolor + i;
                         waga = 5;
@@ -271,14 +271,14 @@ function nastepny(profil) {         //zmiana profilu który wykonuje ruch
 
     var czy = 0;
     while (czy <= 3) {
-        if (parseInt(document.getElementById("profil"+profil).getAttribute("kto")) == 2){
+        if (parseInt(document.getElementById("profil"+profil).getAttribute("kto")) == 2){ //Gracz
             document.getElementById("panel" + profil).innerHTML = `<button id="u${profil}" class="button" onclick="rzut(${profil}, 0)">Losuj</button>`;
             document.getElementById("panel" + profil).innerHTML += `<div id="czas">15</div>`;
             czy = 10;
-        } else if (parseInt(document.getElementById("profil"+profil).getAttribute("kto")) == 1){
+        } else if (parseInt(document.getElementById("profil"+profil).getAttribute("kto")) == 1){ //Bot
             rzut(profil, 0);
             czy = 10;
-        } else {
+        } else { //Puste
             profil += 1;
             if (profil > 3) profil -= 4;
             czy++;
@@ -324,7 +324,7 @@ function odliczanie(){
         document.getElementById("profil"+profil).setAttribute("kto", 1);
         rzut(profil, kostka);
         if(bledy < 2) document.getElementById("profil"+profil).setAttribute("kto", 2);
-        else document.getElementById("nazwa"+profil).innerHTML= `Bot${parseInt(profil)+1}`;
+        else document.getElementById("nazwa"+profil).innerHTML= `Bot ${parseInt(profil)+1}`;
         odliczanie();
     }
 }
