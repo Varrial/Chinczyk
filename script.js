@@ -22,7 +22,7 @@ function zatwierdz(numer, kto) {    //numer profilu, 0-brak gracza  1-bot   2-gr
     document.getElementById("profil" + numer).setAttribute("bledy", 0);
     if (kto == 0) document.getElementById("profil" + numer).innerHTML = ``; 
     else {
-        if (kto == 1) var name = "Bot" + (numer + 1);   //nazwa bota
+        if (kto == 1) var name = "Bot " + (numer + 1);   //nazwa bota
         else var name = document.getElementById("name" + numer).value;  //nazwa gracza
 
         document.getElementById("profil" + numer).innerHTML = `<div id="nazwa${numer}">${name}</div> <div id="miejscaStartowe${numer}"></div>`;
@@ -142,7 +142,7 @@ function move(nr) {                 //poruszanie się po planszy
                 wygrana(user);
                 nastepny(user);
             }   
-        } else {        //tu jest prawdopodobnie błąd      
+        } else {
             document.getElementById("p" + miejsce).removeChild(document.getElementById("p" + miejsce).lastChild);
             miejsce = miejsceNowe;
             if (document.getElementById("p"+miejsce).innerHTML != "") {     //jeżeli na miejscu stoi inny pionek
