@@ -1,7 +1,7 @@
 function player(numer) {            //przełączenie na profil gracza
     document.getElementById("profil" + numer).innerHTML = `
     <button id="b${numer}" class="button" onclick="bot(${numer})"> Gracz </button> 
-    <input class="poletextowe" type="text" value="Nazwa gracza" id="name${numer}" />
+    <input class="poletextowe" type="text" placeholder="Nazwa gracza" id="name${numer}" />
     <button id="b${numer}" class="button" onclick="zatwierdz(${numer}, 2)">Zatwierdz</button>`;
 }
 
